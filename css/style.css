@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Baloo+Tamma+2:wght@400..800&family=Petit+Formal+Script&family=Pinyon+Script&family=Sue+Ellen+Francisco&display=swap');
+@font-face {
+    font-family: Sensation;
+    src: url(../fonts/sensation.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #EDF2F4;
+    --second-bg-color: #59A96A;
+    --text-color: #000000;
+    --second-text-color: #FFFFFF;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    min-height: 111.35vh;
+    padding: 10rem 9% 2rem;
+}
+
+.intro {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    padding: 10rem 9% 2rem;
+    background: var(--bg-color);
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 600ms ease-in-out, visibility 600ms ease-in-out;
+    z-index: 90;
+}
+
+.main-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 600ms ease-in-out, visibility 600ms ease-in-out;
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.main-content.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.intro-content h1 {
+    font-family: Sensation;
+    font-size: 30rem;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: center;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.intro-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: url(../images/title.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.title-grid {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.title-content h1{
+    font-family: 'Pinyon Script', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+    font-size: 15rem;
+    text-align: left;
+    margin-left: -10vh;
+}
+
+.title-content h2{
+    font-family: 'Petit Formal Script', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+    font-size: 12.5rem;
+    font-style: normal;
+    text-align: center;
+    margin-left: -2.5vh;
+}
+
+.title-content h3{
+    font-family: 'Pinyon Script', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+    font-size: 15rem;
+    text-align: right;
+    margin-right: -2.5vh;
+    position: relative;
+}
+
+.title-content img {
+    width: 75vh;
+    height: 75vh;
+    margin-left: -10vh;
+}
+
+.yuu-img {
+    margin-left: 0vh;
+}
+
+.img-ageng {
+    margin-left: -10vh;
+}
+
+.story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20vh;
+}
+
+.travel {
+    visibility: visible;
+}
+
+.travel-img {
+    float: right;
+    width: 42.5vw;
+}
+
+.img-flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.story-content h1 {
+    font-family: Sensation;
+    font-size: 20rem;
+    font-weight: 400;
+    word-wrap: break-word;
+    vertical-align: text-top;
+    margin-top: -10vh;
+    text-align: center;
+}
+
+.story-divide {
+    display: grid;
+    grid-template-columns: 58% 42%;
+}
+
+.story-content p {
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.35rem;
+    margin-right: 1vw;
+    margin-left: -1.5vw;
+}
+
+.story-leaf {
+    width: 20vh;
+    height: 20vh;
+    vertical-align: sub;
+}
+
+.maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: url(../images/map.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20vh;
+    background-position: center;
+}
+
+.maps-divide {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.maps-content h1 {
+    margin-top: -5vh;
+    font-family: Sensation;
+    font-size: 20rem;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.maps-content img {
+    width: 45vh;
+    height: 45vh;
+    margin-left: -7.5vh;
+    border: 1.25rem black solid;
+    border-radius: 1rem;
+}
+
+.maps-content p {
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5rem;
+}
+
+.maps-content br {
+    display: block;
+    margin: 1px 0;
+}
+
+.credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-bg-color);
+}
+
+.credits-content {
+    margin-top: -35vh;
+    margin-bottom: -25vh;
+}
+
+.credits-content h1 {
+    font-family: "Baloo Da 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--second-text-color);
+    font-size: 7rem;
+    text-align: left;
+}
+
+.credits-content h2 {
+    font-family: "Baloo Da 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--second-text-color);
+    font-size: 7rem;
+    text-align: center;
+}
+
+.credits-content p {
+    font-family: "Baloo Tamma 2", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    color: var(--second-text-color);
+    font-size: 3.5rem;
+}
+
+.credits-content img {
+    float: left;
+    width: 25vh;
+    height: 25vh;
+    box-shadow: 0px 13px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 12.5vh;
+    margin-right: 5vh;
+}
+
+.credits-content i {
+    vertical-align: sub;
+}
+
+.credits-me {
+    margin-left: 32.5vh;
+}
+
+/* CSS ANIMATIONS */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+    html {
+        font-size: 40%;
+    }
+
+    .maps-content img {
+        width: 30vh;
+        height: 30vh;
+        margin-left: -4vh;
+        border: 1rem black solid;
+    }
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 10rem 3% 1rem;
+    }
+    .title-content h1 {
+        margin-left: 5.5vh;
+    }
+    .img-ageng {
+        margin-right: -30vh;
+    }
+    .title-content h3 {
+        margin-right: 5.5vh;
+    }
+    .yuu-img {
+        margin-left: -10vh;
+    }
+    .story {
+        margin-bottom: -20vh;
+    }
+    .story-leaf {
+        display: none;
+    }
+    .story-content p {
+        margin-left: 10vh;
+    }
+    .maps {
+        padding-bottom: 7rem;
+    }
+    .maps-content img {
+        width: 30vh;
+        height: 30vh;
+        margin-left: -4vh;
+        border: 1rem black solid;
+    }
+    .maps-content p {
+        margin-left: 10vh;
+    }
+    .credits {
+        padding: 2rem 3%;
+        margin-bottom: -25vh;
+    }
+    .credits-content {
+        margin-top: -55vh;
+        margin-bottom: -25vh;
+    }
+    .credits-content h1 {
+        margin-top: -20vh;
+    }
+    .credits-content img {
+        width: 20vh;
+        height: 20vh;
+    }
+    .credits-me {
+        margin-left: 15vh;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 35%;
+    }
+    .title-content img {
+        width: 55vh;
+        height: 55vh;
+    }
+    .title-content h1 {
+        margin-left: 2.5vh;
+    }
+    .img-ageng {
+        margin-right: -30vh;
+    }
+    .title-content h3 {
+        margin-right: 2.5vh;
+    }
+    .yuu-img {
+        margin-left: -1.5vh;
+    }
+    .story {
+        margin-bottom: -40vh;
+    }
+    .story-content h1 {
+        margin-top: -30vh;
+    }
+    .story-content p {
+        margin-left: 5vh;
+    }
+    .maps {
+        padding-bottom: 5rem;
+    }
+    .maps-content img {
+        width: 30vh;
+        height: 30vh;
+        margin-left: -4.5vh;
+        border: 1rem black solid;
+    }
+    .maps-content p {
+        margin-left: 10.5vh;
+    }
+    .credits {
+        padding: 2rem 3%;
+        margin-bottom: -55vh;
+    }
+    .credits-content {
+        margin-top: -55vh;
+        margin-bottom: -55vh;
+    }
+    .credits-content h1 {
+        margin-top: -30vh;
+    }
+    .credits-content img {
+        width: 20vh;
+        height: 20vh;
+    }
+    .credits-me {
+        margin-left: 15vh;
+    }
+}
+
+@media (max-width: 617px) {
+    .title-grid {
+        grid-template-columns: 1fr;
+    }
+    .story-divide {
+        grid-template-columns: 1fr;
+    }
+    .title-content {
+        margin-top: -25vh;
+    }
+    .title-content img {
+        width: 30vh;
+        height: 30vh;
+        margin: auto;
+    }
+    .img-ageng {
+        margin: auto;
+    }
+    .yuu-img {
+        margin: auto;
+    }
+    .title-content h1 {
+        font-size: 10rem;
+        text-align: center;
+        margin: auto;
+    }
+    .title-content h2 {
+        font-size: 7.5rem;
+        text-align: center;
+        margin: auto;
+    }
+    .title-content h3 {
+        font-size: 10rem;
+        text-align: center;
+        margin: auto;
+    }
+    .story-content {
+        margin-top: 5vh;
+        margin-bottom: 20vh;
+    }
+    .story-content p {
+        text-align: center;
+    }
+    .story-content img {
+        width: 75vw;
+        text-align: center;
+        margin: auto;
+    }
+    .maps-divide {
+        grid-template-columns: 1fr;
+    }
+    .maps-content {
+        margin-top: 10vh;
+        margin-bottom: 20vh;
+    }
+    .maps-content p {
+        text-align: center;
+        margin: auto;
+    }
+    .maps-content img {
+        float: none;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 5vh;
+        display: block;
+    }
+    .credits-content h1 {
+        text-align: center;
+        margin-top: -50vh;
+        margin: auto;
+    }
+    .credits-content p {
+        text-align: center;
+        margin: auto;
+    }
+    .credits-content img {
+        display: block;
+        float: none;
+        text-align: center;
+        margin: auto;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    .credits-me {
+        text-align: center;
+        margin: auto;
+    }
+}
